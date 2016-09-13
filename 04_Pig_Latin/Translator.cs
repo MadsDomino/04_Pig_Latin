@@ -4,32 +4,40 @@
     {
         public string Translate(string x)
         {
-            bool memory = false;
-            bool wordstart = true;
-            string ay = "ay";
+            string[] xarray = x.Split(' ');
             string text = "";
-            string test = "" + x[0];
-            if (test != "a" && test != "e" && test != "i" && test != "o" && test != "u" && test != "y")
-            {
-                memory = true;
-            }
 
-                for (int i = 0; i < x.Length; i++)
+            for (int i = 0; i > xarray.Length; i++)
             {
-                if (!wordstart || !memory)
-                {
-                    text = text + x[i];
-                }
-                if (i == x.Length - 1 && memory)
-                {
-                    text = text + test;
-                }
-                if (i == x.Length - 1)
-                {
-                    text = text + ay;
-                }
-                wordstart = false;
+                text = text + " " + convert(xarray[i]);
             }
+            return text;
+        }
+
+        internal string convert(string word)
+        {
+            bool vowel = false;
+            string letter = "";
+            string memory = "";
+            string text = "";
+
+            for(int i = 0; i<word.Length; i++)
+            {
+                letter = "" + word[i];
+                if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" || letter == "y")
+                {
+                    vowel = true;
+                }
+                if (!vowel)
+                {
+                    memory = memory + word[i];
+                }
+                if (vowel)
+                {
+                    text = text + word[i];
+                }
+            }
+            text = text + memory + "ay";
 
             return text;
         }

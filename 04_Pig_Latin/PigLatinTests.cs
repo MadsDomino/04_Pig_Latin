@@ -27,19 +27,19 @@ namespace _04_Pig_Latin
             Translator translator = new Translator();
             Assert.AreEqual("ananabay", translator.Translate("banana"));
         }
-        /*[TestMethod]
+        [TestMethod]
         public void TranslateWordBeginningWithTwoConsonants()
         {
             Translator translator = new Translator();
             Assert.AreEqual("errychay", translator.Translate("cherry"));
         }
-        [TestMethod]
+        /*[TestMethod]
         public void TranslateTwoWords()
         {
             Translator translator = new Translator();
             Assert.AreEqual("eatay iepay", translator.Translate("eat pie"));
         }
-        [TestMethod]
+        /*[TestMethod]
         public void TranslateWordBeginningWithThreeConsonants()
         {
             Translator translator = new Translator();
