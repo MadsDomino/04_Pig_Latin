@@ -27,7 +27,7 @@ namespace _04_Pig_Latin
             Translator translator = new Translator();
             Assert.AreEqual("ananabay", translator.Translate("banana"));
         }
-        [TestMethod]
+        /*[TestMethod]
         public void TranslateWordBeginningWithTwoConsonants()
         {
             Translator translator = new Translator();
@@ -71,7 +71,7 @@ namespace _04_Pig_Latin
         }
         //Test-driving bonus:
         // write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
-        // retain the punctuation from the original phrase
+        // retain the punctuation from the original phrase*/
 
     }
 }
